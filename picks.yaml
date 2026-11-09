@@ -1,0 +1,17 @@
+# Your selection, shown at the top of the site as "Editor's picks".
+# Edit this file directly on GitHub (pencil icon), then click "Commit changes".
+# The site updates within a few minutes.
+#
+# To add a pick, copy the example below (remove the # signs) and fill it in.
+# Keep the spaces at the start of each line exactly as in the example.
+#
+# edition: December 2026
+# picks:
+#   - name: Example Studio
+#     cnpj: "12345678000190"
+#     sector: Fashion
+#     note: Two or three sentences. The market, why now, and what could go wrong.
+#     link: https://example.com.br
+
+edition: ""
+picks: []

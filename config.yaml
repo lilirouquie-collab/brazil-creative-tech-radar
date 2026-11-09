@@ -1,0 +1,41 @@
+# Settings for Brazil Creative Tech Radar.
+# You can edit this file directly on GitHub (pencil icon, then "Commit changes").
+
+site:
+  title: Brazil Creative Tech Radar
+  tagline: New Brazilian companies where technology meets the creative industries, spotted from the official company registry every week.
+  author: Livia Rouquié Cardoso
+  author_link: https://www.linkedin.com/in/livia-rouquie
+
+# How far back to look: companies opened in the last N months
+window_months: 12
+
+# Email domains used by this many new companies or more are treated as
+# accounting firms (they register companies for clients), not as company websites.
+shared_domain_threshold: 4
+
+# Official source: Receita Federal open CNPJ data.
+# If the weekly run fails with "Could not list", the Receita probably changed
+# its download share: open https://arquivos.receitafederal.gov.br, go to
+# Dados > Cadastros > CNPJ and copy the code after /index.php/s/ in the address bar.
+receita:
+  share_token: gn672Ad4CF8N6TK
+  webdav_base: https://arquivos.receitafederal.gov.br/public.php/webdav/Dados/Cadastros/CNPJ
+  files_base: https://arquivos.receitafederal.gov.br/public.php/dav/files/{token}/Dados/Cadastros/CNPJ/{month}/
+
+# Weekly website checks
+enrich:
+  max_sites_per_run: 2500      # companies with a known domain checked per week
+  max_guesses_per_run: 800     # companies without a domain: try name.com.br, verified by CNPJ on the page
+  guess_domains: true
+  recheck_days_no_site: 28     # check again after this many days if no site yet
+  recheck_days_site: 56
+  recheck_days_guess: 56
+  timeout_seconds: 12
+  concurrency: 24
+
+# Optional AI descriptions (needs an ANTHROPIC_API_KEY secret on GitHub)
+ai:
+  enabled: false
+  model: claude-haiku-4-5
+  max_per_run: 40
